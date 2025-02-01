@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tweet Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Crypto Tweet Generator</h1>
+    </header>
+
+    <div class="container">
+        <h2>Generate 3 Viral Crypto Tweets</h2>
+        <p>Click the button below to generate tweets based on on-chain data and social media activity related to cryptocurrency.</p>
+        <button onclick="generateTweets()">Generate Tweets</button>
+
+        <div class="loading">
+            <p>Generating tweets...</p>
+            <img src="https://i.gifer.com/4V0b.gif" alt="Loading...">
+        </div>
+
+        <div class="output" id="tweetsOutput">
+            <h3>Generated Tweets:</h3>
+            <ol id="tweetsList">
+                <!-- Generated tweets will be inserted here -->
+            </ol>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20these%20viral%20crypto%20tweets%20from%20the%20Crypto%20Tweet%20Generator!" target="_blank">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank">
+                    <i class="fab fa-facebook"></i> Share on Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

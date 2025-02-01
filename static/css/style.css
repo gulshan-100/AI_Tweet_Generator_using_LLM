@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #A9D0F5, #00A9E0);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background 0.5s ease-in-out;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+header {
+    background-color: #006BB3;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 6px solid #004D73;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #444;
+}
+
+.container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+button {
+    background-color: #00A9E0;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #008CCF;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Loader Styling */
+.loading {
+    text-align: center;
+    display: none;
+}
+
+.loading img {
+    width: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Output Styling */
+.output {
+    display: none;
+    margin-top: 30px;
+    background-color: #F3F9FF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 18px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+li span {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+/* Copy Button */
+.copy-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #333;
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+}
+
+/* Social Media Buttons */
+.share-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.share-buttons a {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    background-color: #1DA1F2;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.share-buttons a:hover {
+    background-color: #1681b7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+/* Keyframe for spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
